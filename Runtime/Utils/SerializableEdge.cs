@@ -73,6 +73,8 @@ namespace GraphProcessor
 		//here our owner have been deserialized
 		public void Deserialize()
 		{
+			if (owner == null) return;
+
 			if (!owner.nodesPerGUID.ContainsKey(outputNodeGUID) || !owner.nodesPerGUID.ContainsKey(inputNodeGUID))
 				return ;
 
